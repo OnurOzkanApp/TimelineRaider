@@ -1,6 +1,6 @@
 # Timeline Raider — Forward-Scrolling Shooter (Mobile & PC)
 
-**Status:** In development (active) • **Engine:** Unity (C#) • **Platforms:** PC (mouse), Mobile-ready  
+**Status:** In development (active) • **Engine:** Unity (C#) • **Platforms:** PC (arrow keys and mouse), Mobile-ready  
 **Key tech:** ScriptableObjects, Object Pooling, event-driven state flow, low-poly assets, Blender/Mixamo
 
 Timeline Raider is a forward-scrolling shooter where the world advances through distinct **eras**  
