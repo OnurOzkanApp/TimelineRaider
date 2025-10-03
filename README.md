@@ -4,30 +4,46 @@
 **Key tech:** ScriptableObjects, Object Pooling, event-driven state flow, low-poly assets, Blender/Mixamo
 
 Timeline Raider is a forward-scrolling shooter where the world advances through distinct **eras**  
-(**Caveman → Medieval → Industrial → WW2 → Modern → Futuristic → Cyberpunk**).  
+(**Caveman → Pharaonic Egypt -> Clasical Greece -> Medieval → WW2 → Modern → Futuristic → Cyberpunk**).  
 Each era brings its own environments, enemies, allies, outfits, weapons, and balancing.
 
-<p align="center">
-  <img src="Screenshots/TimelineRaiderCavemanSS.png" width="19%">
-  <img src="Screenshots/TimelineRaiderMedievalSS.png.png" width="19%">
-  <img src="Screenshots/TimelineRaiderWW2SS.png.png" width="19%">
-  <img src="Screenshots/TimelineRaiderModernDaySS.png.png" width="19%">
-  <img src="Screenshots/TimelineRaiderFuturisticSS.png" width="19%">
+<p align="center"> 
+  <!-- New versions --> 
+  <img src="Screenshots/TimelineRaiderMainMenu.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderPauseMenuSS.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderDeathScreenSS.png" width="19%">
 </p>
 
+<p align="center"> 
+  <!-- New versions --> 
+  <img src="Screenshots/TimelineRaiderCavemanEra.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderPharaonicEgyptEra.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderClassicalGreeceEra.png" width="19%">
+  <img src="Screenshots/TimelineRaiderMedievalEra.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderFuturisticEra.png" width="19%"> 
+</p>
+
+<p align="center">
+  <!-- Old versions --> 
+  <img src="Screenshots/TimelineRaiderCavemanSS.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderMedievalSS.png.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderWW2SS.png.png" width="19%">
+  <img src="Screenshots/TimelineRaiderModernDaySS.png.png" width="19%"> 
+  <img src="Screenshots/TimelineRaiderFuturisticSS.png" width="19%"> 
+</p>
 ---
 
 ## ✨ Features
 - **Era-based progression:** Unique environments, enemies, allies, weapons, and HP/damage curves per era.
-- **ScriptableObject weapon system:** Centralized stats (damage, fire rate, projectile type, splash radius/damage, visuals).
+- **ScriptableObject weapon system:** Centralized stats (damage, fire rate, projectile type, splash radius/damage, visuals, animations).
 - **Mobile performance:** Low-poly assets + **Object Pooling** for bullets, enemies, allies, VFX, pickups, and road chunks.
-- **Event-driven scene/state flow:** Win/Lose/Pause, pickup/unlock logic, ally management.
+- **Event-driven scene/state flow:** Lose/Pause, pickup logic, ally management.
 - **Content pipeline:** Blender (low-poly + edits), Mixamo (unified rig & shared animations), Unity Particle System for VFX.
 
 ---
 
 ## 🧱 Architecture (high level)
-- `ScriptableObjects/WeaponData` – weapon stats + projectile references  
+- `ScriptableObjects/WeaponData` – weapon stats + projectile and pickup references + vfx + animations
 - `ObjectPoolManager` – pooled spawning/despawning 
 - `RoadScroller` – forward world movement via recycled chunks  
 - `EraManager` – era management
@@ -57,7 +73,7 @@ Timeline Raider is still a work-in-progress. Development continues as part of a 
 This project was developed by **Onur Özkan** to showcase:
 - Unity gameplay programming skills
 - Clean and scalable code architecture
-- A passion for building engaging, thoughtful game systems
+- A passion for building engaging, thoughtful games and game systems
 
 ---
 
